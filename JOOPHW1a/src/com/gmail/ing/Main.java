@@ -7,10 +7,18 @@ public class Main {
 		Cat catTwo = new Cat("female", "grey", "Mola", 2.1);
 		Cat catThree = new Cat("male", "black", "Lucy", 3.0);
 		
+		System.out.println(catOne);
+		System.out.println(catTwo);
+		System.out.println(catThree);
+		
 		catOne.fight(catTwo);
 		catOne.fight(catThree);
 		catOne.feed();
 		catOne.fight(catThree);
+		
+		System.out.println(catOne);
+		System.out.println(catTwo);
+		System.out.println(catThree);
 	}
 
 }

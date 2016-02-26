@@ -14,6 +14,7 @@ public class Cat {
 		this.name = name;
 		this.weight = weight;
 		this.hungry = true;
+		System.out.println("Wild " + this.name + " appears!");
 	}
 
 	public String getName() {
@@ -39,13 +40,20 @@ public class Cat {
 	public boolean isHungry() {
 		return hungry;
 	}
+	
+	@Override
+	public String toString() {
+		return name + " is a " + color + " " + gender + " cat, weights " + weight + " kg and " + ((hungry)?"hungry":"full");
+	}
 
 	public void feed(){
+		System.out.println("Lets feed " + this.name);
 		this.hungry = false;
 		this.weight += 1.0;
 	}
 	
 	public void fight(Cat opponent){
+		System.out.println(this.name + " VS " + opponent.name);
 		if(!this.gender.equals(opponent.gender)){
 			System.out.println("True cat will never hurt a lady!");
 			return;
